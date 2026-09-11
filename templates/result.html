@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Resume Analysis Results
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="results-container">
+
+
+    <!--HEADER-->
+
+    <div class="results-header">
+
+        <div class="badge">
+            RESUME ANALYSIS COMPLETE
+        </div>
+
+
+        <h1>
+            Your Career Intelligence Report
+        </h1>
+
+
+        <p>
+            {{ filename }}
+        </p>
+
+    </div>
+
+
+
+    <!--SCORE CARDS-->
+
+    <div class="stats">
+
+
+        <div class="stat-card">
+
+            <span>
+                OVERALL SCORE
+            </span>
+
+            <strong>
+                {{ overall_score }}%
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>
+                TOP MATCH
+            </span>
+
+            <strong>
+                {{ best_match }}%
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>
+                DETECTED SKILLS
+            </span>
+
+            <strong>
+                {{ skills|length }}
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--BEST Role-->
+
+    <div class="best-role">
+
+        <span>
+            RECOMMENDED CAREER ROLE
+        </span>
+
+
+        <h2>
+            {{ best_role }}
+        </h2>
+
+
+        <p>
+            This role currently has the highest
+            calculated skill match with your resume.
+        </p>
+
+    </div>
+
+
+
+    <!--DETECTED SKILLS -->
+
+    <section class="result-section">
+
+        <h2>
+            Detected Skills
+        </h2>
+
+
+        <div class="skill-list">
+
+
+            {% for skill in skills %}
+
+                <span class="skill">
+                    {{ skill }}
+                </span>
+
+            {% endfor %}
+
+
+        </div>
+
+    </section>
+
+
+
+    <!--JOB Matching-->
+
+    <section class="result-section">
+
+        <h2>
+            Career Role Matching
+        </h2>
+
+
+        <div class="jobs">
+
+
+            {% for job in jobs %}
+
+
+            <div class="job-card">
+
+
+                <div class="job-top">
+
+                    <div>
+
+                        <h3>
+                            {{ job.title }}
+                        </h3>
+
+                        <p>
+                            {{ job.description }}
+                        </p>
+
+                    </div>
+
+
+                    <div class="score">
+
+                        {{ job.match_score }}%
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MATCHED -->
+
+                <div class="job-skills">
+
+                    <h4>
+                        ✓ Matched Skills
+                    </h4>
+
+
+                    {% if job.matched_skills %}
+
+                        {% for skill in job.matched_skills %}
+
+                            <span class="matched">
+                                {{ skill }}
+                            </span>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                        <span>
+                            No matching skills found
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+
+
+                <!-- MISSING -->
+
+                <div class="job-skills">
+
+                    <h4>
+                        ⚠ Missing Skills
+                    </h4>
+
+
+                    {% if job.missing_skills %}
+
+                        {% for skill in job.missing_skills %}
+
+                            <span class="missing">
+                                {{ skill }}
+                            </span>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                        <span class="matched">
+                            No major skill gaps
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+
+            </div>
+
+
+            {% endfor %}
+
+
+        </div>
+
+    </section>
+
+
+
+    <!--RESUME TEXT-->
+
+    <details class="resume-text">
+
+        <summary>
+            View Extracted Resume Text
+        </summary>
+
+
+        <pre>
+{{ resume_text }}
+        </pre>
+
+    </details>
+
+
+
+    <!--BACK-->
+
+    <a
+        href="{{ url_for('home') }}"
+        class="back-button"
+    >
+
+        ← Analyze Another Resume
+
+    </a>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,701 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f8fafc;
+
+    color: #0f172a;
+
+}
+
+
+/*HERO*/
+
+.hero {
+
+    max-width: 900px;
+
+    margin: 90px auto 60px;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero h1 {
+
+    margin: 20px 0;
+
+    font-size: 56px;
+
+    line-height: 1.1;
+
+}
+
+
+.hero p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/*SECTION*/
+
+.section {
+
+    max-width: 1100px;
+
+    margin: 70px auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+.section h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/*FEATURES*/
+
+.features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.06);
+
+    transition: 0.3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #93c5fd;
+
+}
+
+
+.icon {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card h3 {
+
+    color: #2563eb;
+
+}
+
+
+.card p {
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+}
+
+
+/* UPLOAD*/
+
+.upload-section {
+
+    max-width: 800px;
+
+    margin: 80px auto;
+
+    padding: 20px;
+
+}
+
+
+.upload-card {
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 22px;
+
+    border: 1px solid #e2e8f0;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px
+        rgba(15, 23, 42, 0.08);
+
+}
+
+
+.upload-card > span {
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.upload-card h2 {
+
+    font-size: 34px;
+
+}
+
+
+.upload-card p {
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+}
+
+
+input[type="file"] {
+
+    width: 100%;
+
+    margin: 25px 0;
+
+    padding: 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+}
+
+
+button {
+
+    border: none;
+
+    padding: 15px 32px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+/*RESULTS*/
+
+.results-container {
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    padding: 20px;
+
+}
+
+
+.results-header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.results-header h1 {
+
+    font-size: 44px;
+
+}
+
+
+.results-header p {
+
+    color: #64748b;
+
+}
+
+
+/*STATS*/
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.stat-card {
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+
+.stat-card span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.stat-card strong {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 36px;
+
+    color: #2563eb;
+
+}
+
+
+/* BEST ROLE*/
+
+.best-role {
+
+    padding: 35px;
+
+    margin: 30px 0;
+
+    border-radius: 18px;
+
+    background: #0f172a;
+
+    color: white;
+
+}
+
+
+.best-role span {
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.best-role h2 {
+
+    font-size: 32px;
+
+    margin: 10px 0;
+
+}
+
+
+.best-role p {
+
+    color: #cbd5e1;
+
+}
+
+
+/*RESULT SECTION*/
+
+.result-section {
+
+    margin: 50px 0;
+
+}
+
+
+.result-section h2 {
+
+    font-size: 28px;
+
+}
+
+
+/*SKILLS*/
+
+.skill-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.skill {
+
+    padding: 9px 15px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/*JOB CARD*/
+
+.jobs {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.job-card {
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+}
+
+
+.job-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.job-top h3 {
+
+    font-size: 24px;
+
+    margin-top: 0;
+
+}
+
+
+.job-top p {
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+}
+
+
+.score {
+
+    min-width: 90px;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+/*JOB SKILLS*/
+
+.job-skills {
+
+    margin-top: 25px;
+
+}
+
+
+.job-skills h4 {
+
+    margin-bottom: 12px;
+
+}
+
+
+.matched,
+.missing {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    margin: 4px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+}
+
+
+.matched {
+
+    background: #ecfdf5;
+
+    color: #047857;
+
+}
+
+
+.missing {
+
+    background: #fff7ed;
+
+    color: #c2410c;
+
+}
+
+
+/*RESUME TEXT*/
+
+.resume-text {
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+}
+
+
+.resume-text summary {
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+.resume-text pre {
+
+    white-space: pre-wrap;
+
+    color: #475569;
+
+    line-height: 1.6;
+
+}
+
+
+/*BACK BUTTON*/
+
+.back-button {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 22px;
+
+    background: #0f172a;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+}
+
+
+/*RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .features {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .upload-card {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .job-top {
+
+        flex-direction: column;
+
+    }
+
+}

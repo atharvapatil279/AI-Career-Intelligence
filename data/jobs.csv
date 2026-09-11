@@ -1,0 +1,11 @@
+title,description,required_skills
+Data Analyst,"Analyze business data and create dashboards","python|sql|pandas|excel|power bi|statistics"
+Data Scientist,"Build machine learning models and analyze complex datasets","python|sql|pandas|numpy|machine learning|scikit-learn|statistics"
+Machine Learning Engineer,"Develop and deploy machine learning systems","python|machine learning|scikit-learn|tensorflow|docker|git"
+Python Developer,"Build backend applications and APIs using Python","python|flask|django|sql|git|rest api"
+Data Engineer,"Build data pipelines and process large datasets","python|sql|pyspark|spark|etl|airflow|docker"
+AI Engineer,"Develop artificial intelligence and deep learning solutions","python|machine learning|deep learning|tensorflow|pytorch|nlp"
+Computer Vision Engineer,"Develop computer vision applications","python|opencv|computer vision|numpy|machine learning|deep learning"
+QA Automation Engineer,"Develop automated testing frameworks and tools","python|testing|automation|pytest|selenium|git"
+Software Engineer,"Develop software applications using programming and data structures","python|java|oop|data structures|algorithms|git"
+DevOps Engineer,"Build and maintain deployment and infrastructure systems","linux|docker|kubernetes|git|aws|python"
